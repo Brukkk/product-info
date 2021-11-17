@@ -119,16 +119,12 @@ section {
 .general .product-gallery .images-row > img {
   width: 75px;
   height: auto;
-  margin-right: 1rem;
   border-radius: 8px;
   border: 2px solid transparent;
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.general .product-gallery .images-row > img:last-child {
-  margin-right: 0;
-}
-.general .product-gallery .images-row img:hover {
+.general .product-gallery .images-row > img:hover {
   border: 2px solid #ff7d1a;
   opacity: 0.5;
 }

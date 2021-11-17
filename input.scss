@@ -102,10 +102,9 @@ nav{
                 border-radius: 50%; 
                 border: 2px solid $white;
                 transition: all 0.3s ease;
-                
-            }
-            .user:hover{
-                border: 2px solid $primary-orange;
+                &:hover{
+                    border: 2px solid $primary-orange;
+                }
             }
         }
     }
@@ -141,24 +140,20 @@ section{
             justify-content: space-between;
             
             
-            > img{
+            >img{
                 width: 75px;
                 height: auto;
-                margin-right: 1rem;
                 border-radius: 8px;
                 border: 2px solid transparent;
                 transition: all 0.3s ease;
-                cursor: pointer;
-                
-                &:last-child{
-                    margin-right:0;
+                cursor: pointer;   
+                &:hover{ 
+                    border: 2px solid $primary-orange;
+                    opacity: 0.5;
                     
                 }
             }
-            img:hover{
-                border: 2px solid $primary-orange;
-                opacity: 0.5;
-            }
+            
         }
 
 
