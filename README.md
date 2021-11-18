@@ -2,7 +2,7 @@
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
----
+
 
 ## Table of contents
 
@@ -21,7 +21,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Overview
 
----
 
 ### The challenge
 
@@ -73,10 +72,11 @@ Implementing Sass Nested properties is is such a great choice instead of vanilla
 
 - [x] Desktop website
 - [x] Desktop Style
+- [x] Shopping-cart
 - [ ] Lightbox Image Gallery
 - [ ] Responsive mobile
-- [ ] Order-buttons
-- [ ] Shopping-cart
+- [ ] Order-buttons-interaction
+
 
 ## Author
 
