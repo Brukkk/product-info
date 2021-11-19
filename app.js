@@ -7,6 +7,8 @@ function isActive(){
 
 prevImages.forEach(image =>{
     image.addEventListener('click',function(){
+        
+        
         for (const img of prevImages){
             if (img.classList.contains("active-prev-image")){
                 img.classList.remove("active-prev-image");
@@ -15,9 +17,9 @@ prevImages.forEach(image =>{
         
         let regex = /(image-product-\d)/;
         let newSrc = regex.exec(image.src)[0]; 
-        let newStr = `https://brukkk.github.io/product-info/images/${newSrc}.jpg`
+        let newStr = `/images/${newSrc}.jpg`
         image.classList.add("active-prev-image");
         mainImage.src = newStr;      
-        console.log(mainImage.src);
+        
     })
 })
