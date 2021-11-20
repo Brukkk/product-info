@@ -147,12 +147,49 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.general .product-gallery .close-icon {
+  display: none;
+  position: absolute;
+  top: -2rem;
+  right: 12.5%;
+  cursor: pointer;
+  transition: all 500 ease;
+  border-style: none;
+}
+.general .product-gallery .close-icon > img:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(7259%) hue-rotate(348deg) brightness(103%) contrast(101%);
 }
 .general .product-gallery .main-image {
   width: 400px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
+}
+.general .product-gallery #prev {
+  position: absolute;
+  left: 9.5%;
+  top: 35%;
+}
+.general .product-gallery #next {
+  position: absolute;
+  right: 9.5%;
+  top: 35%;
+}
+.general .product-gallery .slider-button {
+  display: none;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.general .product-gallery .slider-button > img {
+  padding: 1em;
+  transition: all 500 ease;
+}
+.general .product-gallery .slider-button > img:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(7259%) hue-rotate(348deg) brightness(103%) contrast(101%);
 }
 .general .product-gallery .images-row {
   width: 400px;
