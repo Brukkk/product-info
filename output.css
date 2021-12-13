@@ -102,7 +102,7 @@ nav .nav-container .right .dropdown .cart-menu .hr-line {
   margin: 0.25rem auto 0;
   background-color: #b6bcc8;
 }
-nav .nav-container .right .dropdown .cart-menu .content-box, nav .nav-container .right .dropdown .cart-menu .content-box-filled {
+nav .nav-container .right .dropdown .cart-menu .content-box {
   height: calc(100% - 57px);
   display: flex;
   justify-content: center;
@@ -112,10 +112,43 @@ nav .nav-container .right .dropdown .cart-menu .content-box, nav .nav-container 
   padding: 1em 1.25em;
 }
 nav .nav-container .right .dropdown .cart-menu .content-box-filled {
-  align-items: baseline;
+  color: #68707d;
+  font-weight: 400;
+  padding: 1em 1.25em;
+  height: 80%;
+  overflow-y: hidden;
 }
 nav .nav-container .right .dropdown .cart-menu .content-box-filled .cart-product {
+  max-height: 5rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.55rem;
+  margin-bottom: 1rem;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled .cart-product b {
+  color: black;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled .cart-product > img:first-child {
+  width: 45px;
+  height: auto;
+  border-radius: 4px;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled > button {
+  width: 100%;
+  background-color: #ff7d1a;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  border-radius: 8px;
+  padding: 1.25em 5em;
+  max-height: 50px;
+  border-style: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled > button:hover {
+  opacity: 0.7;
 }
 nav .nav-container .right .dropdown > img {
   transition: all 0.3s ease;
@@ -326,6 +359,7 @@ section {
   border-style: none;
   cursor: pointer;
   box-shadow: 0px 0px 10px 10px #ffede0;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 .general .product-desc .order-box > button > img {

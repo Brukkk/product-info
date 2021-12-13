@@ -136,10 +136,44 @@ nav{
                         padding: 1em 1.25em;
                     }
                     .content-box-filled{
-                        @extend .content-box;
-                        align-items: baseline;
+                        color: $dark-grayish-blue;
+                        font-weight: $fw-normal;
+                        padding: 1em 1.25em;
+                        height: 80%;
+                        overflow-y: hidden;
                         .cart-product{
+                            max-height: 5rem;
                             display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            line-height: 1.55rem;
+                            margin-bottom: 1rem;
+                            b{
+                                color:$black;
+                            }
+                            
+                            >img:first-child{
+                                width: 45px;
+                                height: auto;
+                                border-radius: 4px;
+                            }
+                        }
+                        >button{
+                            width: 100%;
+                            background-color: $primary-orange;
+                            text-align: center;
+                            font-weight: $fw-bold;
+                            color:$white;
+                            border-radius: 8px;
+                            padding: 1.25em 5em;
+                            max-height: $nav-height/2;
+                            border-style: none;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            
+                        }
+                        >button:hover{
+                            opacity: 0.7;
                         }
                     }
                 }
@@ -380,6 +414,7 @@ section{
                 border-style: none;
                 cursor: pointer;
                 box-shadow: 0px 0px 10px 10px $pale-orange;
+                font-weight: $fw-bold;
                 transition: all 0.3s ease;
                 >img{
                     height: 15px;

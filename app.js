@@ -55,7 +55,9 @@ minus.addEventListener("click", ()=>{
 // CART
 const cartContent = document.querySelector(".content-box");
 // ADD TO CART BUTTON
-const addBtn = document.querySelector("#add")
+const addBtn = document.querySelector("#add");
+const checkoutBtn = document.createElement("button");
+checkoutBtn.innerText = "Checkout";
 
 addBtn.addEventListener("click",()=>{
     let title = document.querySelector("h2").innerText;
@@ -84,4 +86,6 @@ addBtn.addEventListener("click",()=>{
     newProduct.classList.add("cart-product");
     // ADD TO THE CART
     cartContent.appendChild(newProduct);
+    cartContent.appendChild(checkoutBtn);
 })
+
