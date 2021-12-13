@@ -57,34 +57,24 @@ const cartContent = document.querySelector(".content-box");
 // ADD TO CART BUTTON
 const addBtn = document.querySelector("#add")
 
-
-
-
-
 addBtn.addEventListener("click",()=>{
-    // variables created in the event due to not a
     let title = document.querySelector("h2").innerText;
     let price = document.querySelector(".price").innerText;
     let total = parseFloat(price.slice(1)*amount).toFixed(2);             
-
-
     //CREATE NEW PRODUCT VARS
     let newProduct = document.createElement("div");
-
+    // GRAB FIRST THUMBNAIL IMG
     let cartImg = document.createElement("img");
     cartImg.src = prevImages[0].src;
-
-
+    // PRODUCT INFO FOR THE CART
     let infoProduct = document.createElement("p");
     infoProduct.innerHTML = `${title}<br>${price} x ${amount} <b>$${total}</b>`;
-
-
-    // BASURITA
+    // TRASH ICON
     let deleteIcon = document.createElement("img");
     deleteIcon.src = "images/icon-delete.svg";
-    
-    // DELETE EMPTY
+    // DELETE EMPTY CART TEXT
     cartContent.textContent= "";
+    // APPEND EACH ELEMENT TO THE DIV
     newProduct.appendChild(cartImg);
     newProduct.appendChild(infoProduct);
     newProduct.appendChild(deleteIcon);
