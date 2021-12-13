@@ -1,9 +1,6 @@
 const prevImages = document.querySelectorAll(".image-prev");
 const mainImage = document.querySelector(".main-image");
 
-function isActive(){
-    return element.classList.contains("active-prev-image");
-}
 
 prevImages.forEach(image =>{
     image.addEventListener('click',function(){
