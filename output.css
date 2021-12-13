@@ -102,19 +102,26 @@ nav .nav-container .right .dropdown .cart-menu .hr-line {
   margin: 0.25rem auto 0;
   background-color: #b6bcc8;
 }
-nav .nav-container .right .dropdown .cart-menu .content-box {
+nav .nav-container .right .dropdown .cart-menu .content-box, nav .nav-container .right .dropdown .cart-menu .content-box-filled {
   height: calc(100% - 57px);
   display: flex;
   justify-content: center;
   align-items: center;
   color: #68707d;
   font-weight: 700;
+  padding: 1em 1.25em;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled {
+  align-items: baseline;
+}
+nav .nav-container .right .dropdown .cart-menu .content-box-filled .cart-product {
+  display: flex;
 }
 nav .nav-container .right .dropdown > img {
   transition: all 0.3s ease;
 }
 nav .nav-container .right .dropdown > img:hover,
-nav .nav-container .right .dropdown > img:active {
+nav .nav-container .right .dropdown > img:focus-within {
   filter: brightness(0) saturate(100%);
 }
 nav .nav-container .right .dropdown:hover .cart-menu {
@@ -155,7 +162,7 @@ section {
   top: -2rem;
   right: 12.5%;
   cursor: pointer;
-  transition: all 500 ease;
+  background-color: transparent;
   border-style: none;
 }
 .general .product-gallery .close-icon > img:hover {
@@ -186,7 +193,6 @@ section {
 }
 .general .product-gallery .slider-button > img {
   padding: 1em;
-  transition: all 500 ease;
 }
 .general .product-gallery .slider-button > img:hover {
   filter: brightness(0) saturate(100%) invert(60%) sepia(20%) saturate(7259%) hue-rotate(348deg) brightness(103%) contrast(101%);

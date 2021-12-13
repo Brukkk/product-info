@@ -103,7 +103,7 @@ nav{
                 padding-bottom:1.5rem;
                 margin-bottom:-1.5rem;
                 .cart-menu{
-                     display: none; 
+                    display: none; 
                     position: absolute;
                     
                     top: 85%;
@@ -133,6 +133,14 @@ nav{
                         
                         color: $dark-grayish-blue;
                         font-weight: $fw-bold;
+                        padding: 1em 1.25em;
+                    }
+                    .content-box-filled{
+                        @extend .content-box;
+                        align-items: baseline;
+                        .cart-product{
+                            display: flex;
+                        }
                     }
                 }
             
@@ -140,9 +148,10 @@ nav{
                 transition: all 0.3s ease;
             }
             >img:hover,
-            >img:active{
+            >img:focus-within{
                 // way to set up any svg to black (it can loose detail depending on how many filter has been applied)
                 filter: brightness(0) saturate(100%);
+                
             }
             }
 
@@ -191,9 +200,10 @@ section{
             top: -2rem;
             right: 12.5%;
             cursor:pointer;
-            transition: all 500 ease;
+            background-color: transparent;
             border-style: none;
             >img:hover{
+                
                 filter: $filter-primary-orange;
             }    
         }
@@ -221,12 +231,11 @@ section{
             border: 1px solid hsla(0, 0%, 0%, 0.500);
             cursor:pointer;
             >img{
-                
                 padding: 1em;
-                transition: all 500 ease;
-            }
-            >img:hover{
-                filter :$filter-primary-orange;
+                
+                &:hover{
+                    filter :$filter-primary-orange;
+                }
             }
 
         }
