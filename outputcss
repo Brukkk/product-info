@@ -287,7 +287,7 @@ section {
   background-color: #b6bcc8;
 }
 .general .product-desc .order-box .amount-order .disabled {
-  filter: grayscale(100%) !important;
+  background-color: red;
 }
 .general .product-desc .order-box .amount-order .disabled:hover {
   cursor: not-allowed;
@@ -332,4 +332,4 @@ section {
   opacity: 0.7;
 }
 
-/*# sourceMappingURL=output.css.map */
+/*# sourceMappingURL=outputcss.map */

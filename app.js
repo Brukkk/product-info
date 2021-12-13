@@ -1,7 +1,10 @@
-const prevImages = document.querySelectorAll(".image-prev");
-const mainImage = document.querySelector(".main-image");
+const prevImages = document.querySelectorAll(".image-prev"); // Thumbnail images
+const mainImage = document.querySelector(".main-image"); // Main product image
+const plus = document.querySelector("#plusSign");
+const minus = document.querySelector("#minusSign");
+const quantity = document.querySelector("#quantityOrder");
 
-
+// Images interaction
 prevImages.forEach(image =>{
     image.addEventListener('click',function(){
         // Remove every "Clicked" preview Image class
@@ -20,5 +23,30 @@ prevImages.forEach(image =>{
         mainImage.src = newStr;      
         
     })
+})
+
+// Order amount
+var amount = 1;
+
+
+plus.addEventListener("click", ()=>{
+    amount += 1;
+    quantity.innerText = amount;
+
+    if(amount !== 1){
+        minus.classList.remove("disabled")
+    }
+})
+
+minus.addEventListener("click", ()=>{
+    if (amount === 1){
+        return;
+    } 
+      
+    amount -= 1;
+    quantity.innerText = amount;
+    if (amount === 1){
+        minus.classList.add("disabled");
+    }
 })
 

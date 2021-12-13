@@ -331,10 +331,16 @@ section{
                         display: flex;
                         align-items: center;
                     }
+                    
                 }
                 button:hover{
-                    background-color: $pale-orange;
                     background-color: $grayish-blue;
+                }
+                .disabled{
+                    filter:grayscale(100%) !important;
+                    &:hover{
+                        cursor:not-allowed;
+                    }
                 }
                 >span{
                     display: flex;
