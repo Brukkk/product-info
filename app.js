@@ -8,9 +8,9 @@ function isActive(){
 prevImages.forEach(image =>{
     image.addEventListener('click',function(){
         for (const img of prevImages){
-            if (img.classList.contains("active-prev-image")){
-                img.classList.remove("active-prev-image");
-            }
+            
+            img.classList.remove("active-prev-image");
+            
         }
         
         let regex = /(image-product-\d)/;
@@ -21,3 +21,4 @@ prevImages.forEach(image =>{
         console.log(mainImage.src);
     })
 })
+
