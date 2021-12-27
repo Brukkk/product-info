@@ -58,11 +58,8 @@ const cartContent = document.querySelector(".content-box");
 const addBtn = document.querySelector("#add");
 const checkoutBtn = document.createElement("button");
 checkoutBtn.innerText = "Checkout";
-
+let productCount = 0;
 let numberId = 0;        
-
-
-
 
 addBtn.addEventListener("click",()=>{
     //CREATE NEW PRODUCT VARS
@@ -87,19 +84,16 @@ addBtn.addEventListener("click",()=>{
     // TRASH ICON
     let deleteIcon = document.createElement("img");
     deleteIcon.src = "images/icon-delete.svg";
-    
-    
     // APPEND EACH ELEMENT TO THE DIV
     newProduct.appendChild(cartImg);
     newProduct.appendChild(infoProduct);
     newProduct.appendChild(deleteIcon);
     // ADD CLASSES TO NEW PRODUCT
-    
-    
     newProduct.classList.add("cart-product");
     // ADD TO THE CART
-    
     cartContent.appendChild(newProduct);
-    newProduct.insertAdjacentElement("afterend",checkoutBtn); 
+    newProduct.insertAdjacentElement("afterend",checkoutBtn);
+    productCount = cartContent.childElementCount-1; // Count all child elements - btn
+    console.log(`Product count: ${productCount}`)
 })
 
