@@ -115,8 +115,8 @@ nav .nav-container .right .dropdown .cart-menu .content-box-filled {
   color: #68707d;
   font-weight: 400;
   padding: 1em 1.25em;
-  height: 80%;
-  overflow-y: hidden;
+  height: 75%;
+  overflow-y: auto;
 }
 nav .nav-container .right .dropdown .cart-menu .content-box-filled .cart-product {
   max-height: 5rem;

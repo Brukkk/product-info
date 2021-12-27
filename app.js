@@ -59,12 +59,25 @@ const addBtn = document.querySelector("#add");
 const checkoutBtn = document.createElement("button");
 checkoutBtn.innerText = "Checkout";
 
+let numberId = 0;        
+
+
+
+
 addBtn.addEventListener("click",()=>{
-    let title = document.querySelector("h2").innerText;
-    let price = document.querySelector(".price").innerText;
-    let total = parseFloat(price.slice(1)*amount).toFixed(2);             
     //CREATE NEW PRODUCT VARS
     let newProduct = document.createElement("div");
+    let title = document.querySelector("h2").innerText;
+    let price = document.querySelector(".price").innerText;
+    let total = parseFloat(price.slice(1)*amount).toFixed(2);
+    newProduct.id = numberId;
+    numberId++;
+
+    if (cartContent.classList.contains("content-box")){
+        cartContent.textContent= "";
+        cartContent.classList.remove("content-box");
+        cartContent.classList.add("content-box-filled");
+    }
     // GRAB FIRST THUMBNAIL IMG
     let cartImg = document.createElement("img");
     cartImg.src = prevImages[0].src;
@@ -74,18 +87,19 @@ addBtn.addEventListener("click",()=>{
     // TRASH ICON
     let deleteIcon = document.createElement("img");
     deleteIcon.src = "images/icon-delete.svg";
-    // DELETE EMPTY CART TEXT
-    cartContent.textContent= "";
+    
+    
     // APPEND EACH ELEMENT TO THE DIV
     newProduct.appendChild(cartImg);
     newProduct.appendChild(infoProduct);
     newProduct.appendChild(deleteIcon);
     // ADD CLASSES TO NEW PRODUCT
-    cartContent.classList.remove("content-box");
-    cartContent.classList.add("content-box-filled");
+    
+    
     newProduct.classList.add("cart-product");
     // ADD TO THE CART
+    
     cartContent.appendChild(newProduct);
-    cartContent.appendChild(checkoutBtn);
+    newProduct.insertAdjacentElement("afterend",checkoutBtn); 
 })
 

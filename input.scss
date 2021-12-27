@@ -139,8 +139,8 @@ nav{
                         color: $dark-grayish-blue;
                         font-weight: $fw-normal;
                         padding: 1em 1.25em;
-                        height: 80%;
-                        overflow-y: hidden;
+                        height: 75%;
+                        overflow-y:auto;
                         .cart-product{
                             max-height: 5rem;
                             display: flex;
