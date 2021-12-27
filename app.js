@@ -18,7 +18,7 @@ prevImages.forEach(image =>{
         // Executes the search on the image it was clicked
         let newSrc = regex.exec(image.src)[0]; 
         //Set up the new resource from the folder (Every image has a pair) Ex: image-product-22.jpg -> image-product-22-thumbnail.jpg
-        let newStr = `/images/${newSrc}.jpg`
+        let newStr = `https://brukkk.github.io/product-info/images/${newSrc}.jpg`
         // Add class to thumbnail image
         image.classList.add("active-prev-image");
         // Set up our new thumbnail to be the active image
