@@ -74,9 +74,11 @@ Implementing Sass Nested properties is is such a great choice instead of vanilla
 - [x] Desktop Style
 - [x] Shopping-cart
 - [x] Switch main-image with thumbnail
+- [x] Order-buttons-interaction
+- [x] View the cart with made orders
+- [ ] Remove items from cart
 - [ ] Lightbox Image Gallery
 - [ ] Responsive mobile
-- [ ] Order-buttons-interaction
 
 
 ## Author
